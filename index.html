@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeitberechnung</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>Zeitberechnung</h1>
+    <form action="/calculate" method="post">
+        <label for="startzeit">Startzeit:</label>
+        <input type="time" id="startzeit" name="startzeit" required><br><br>
+        <label for="dauer">Arbeitszeitdauer (in Minuten):</label>
+        <input type="number" id="dauer" name="dauer" required><br><br>
+        <label for="pause">Pausendauer (in Minuten):</label>
+        <input type="number" id="pause" name="pause" value="0"><br><br>
+        <input type="submit" value="Berechnen">
+    </form>
+    <div id="ergebnis">
+        <!-- Hier wird das Ergebnis der Berechnung angezeigt -->
+    </div>
+</body>
+</html>
