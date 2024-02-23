@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeitberechnung</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script>
+        // JavaScript function um dass Feld dauer zu befüllen mit fertigen Buttons
+        function fillMinutes(minutes) {
+            document.getElementById("dauer").value = minutes;
+        }
+    </script>
 </head>
 <body>
     <h1>Zeitberechnung</h1>
@@ -15,6 +21,11 @@
         <input type="number" id="dauer" name="dauer" required value="462"><br><br>
         <label for="pause">Pausendauer (in Minuten):</label>
         <input type="number" id="pause" name="pause" value="0"><br><br>
+        <button type="button" onclick="fillMinutes(60)">1 Stunde</button>
+        <button type="button" onclick="fillMinutes(270)">4,5 Stunden</button>
+        <button type="button" onclick="fillMinutes(462)">7,7 Stunden</button>
+        <button type="button" onclick="fillMinutes(480)">8 Stunden</button>
+        <button type="button" onclick="fillMinutes(720)">12 Stunden</button><br><br>
         <input type="submit" value="Berechnen">
     </form>
     <div id="ergebnis">
