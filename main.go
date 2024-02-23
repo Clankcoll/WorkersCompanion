@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -16,11 +17,22 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("index.html")
+	lang := r.Header.Get("Accept-Language")
+	var tmpl *template.Template
+	var err error
+
+	// Überprüfe die Sprache des Browsers
+	if strings.Contains(lang, "en") {
+		tmpl, err = template.ParseFiles("index_en.html")
+	} else {
+		tmpl, err = template.ParseFiles("index.html")
+	}
+
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
 	tmpl.Execute(w, nil)
 }
 
