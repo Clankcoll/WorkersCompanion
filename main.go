@@ -17,12 +17,12 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	lang := r.Header.Get("Accept-Language")
+	lang := getPreferredLanguage(r)
 	var tmpl *template.Template
 	var err error
 
 	// Überprüfe die Sprache des Browsers
-	if strings.Contains(lang, "en") {
+	if lang == "en" {
 		tmpl, err = template.ParseFiles("index_en.html")
 	} else {
 		tmpl, err = template.ParseFiles("index.html")
@@ -34,6 +34,19 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	tmpl.Execute(w, nil)
+}
+
+func getPreferredLanguage(r *http.Request) string {
+	lang := r.Header.Get("Accept-Language")
+	langs := strings.Split(lang, ",")
+	for _, l := range langs {
+		l = strings.Split(l, ";")[0]
+		l = strings.TrimSpace(l)
+		if l == "en" || l == "de" { // hier mehr sprachen hinzufügen
+			return strings.ToLower(l)
+		}
+	}
+	return "" // kehre zur default language zurück when keine sprache gefunden
 }
 
 func calculateHandler(w http.ResponseWriter, r *http.Request) {
