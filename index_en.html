@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timecalculator</title>
+    <title>TimeCalculator</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script>
+        // JavaScript function um dass Feld dauer zu befüllen mit fertigen Buttons
+        function fillMinutes(minutes) {
+            document.getElementById("dauer").value = minutes;
+        }
+    </script>
 </head>
 <body>
-    <h1>TimeCalc</h1>
-    <form action="/calculate" method="post">
-        <label for="startzeit">Start Time:</label>
+    <div id="eingaben">
+        <h1>TimeCalculator</h1>
+        <form action="/calculate" method="post">
+        <label for="startzeit">Starting Time:</label>
         <input type="time" id="startzeit" name="startzeit" required><br><br>
-        <label for="dauer">Work duration (in minutes):</label>
+        <label for="dauer">Working Time (in minutes):</label>
         <input type="number" id="dauer" name="dauer" required value="462"><br><br>
-        <label for="pause">Pause (in minutes):</label>
+        <label for="pause">Pause Time (in minutes):</label>
         <input type="number" id="pause" name="pause" value="0"><br><br>
+        <button type="button" onclick="fillMinutes(60)">1 Hour</button>
+        <button type="button" onclick="fillMinutes(270)">4,5 Hours</button>
+        <button type="button" onclick="fillMinutes(462)">7,7 Hours</button>
+        <button type="button" onclick="fillMinutes(480)">8 Hours</button>
+        <button type="button" onclick="fillMinutes(720)">12 Hours</button><br><br>
         <input type="submit" value="calculate">
     </form>
+    </div>
     <div id="ergebnis">
         <!-- Hier wird das Ergebnis der Berechnung angezeigt -->
     </div>

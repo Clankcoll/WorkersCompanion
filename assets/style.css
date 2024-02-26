@@ -9,3 +9,13 @@ form {
 #ergebnis {
     font-weight: bold;
 }
+
+#eingaben {
+    text-align: center;
+    display: table;
+    padding-top: 15%;
+    width: 1%;
+    overflow: hidden; 
+    display: table-cell; 
+    vertical-align: middle;
+}
