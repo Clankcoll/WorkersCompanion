@@ -1,8 +1,3 @@
-```[tasklist]
-### My tasks
-- [ ] test
-- [ ] test2
-```
 Please keep in mind the Website is not yet always up to date until i know how i could automate this to build its own Docker image rn i need to do it by hand.
 
 Also this Project and looks of it may and probably will change alot until i am statisfied for a personal full release
