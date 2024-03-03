@@ -12,6 +12,6 @@ this should be fine for me atleast.
 
 Side Note:
 This Project is only going to be coded and mantained in my Free Time but this is not going to be my Main Point to do after Work so some things like replys changes fixes etc could take their Time and should since i do it for Fun.
-Also if somone would like to be with me and give me LIVE input the development and planning of this whole Project is going to be Streamed lived on Twitch and Youtube.
-[Twitch](https://twitch.tv/clankcoll/).
-[Youtube](https://www.youtube.com/@clanktech9336)
+Also if somone would like to be with me and give me LIVE input the development and planning of this whole Project is going to be Streamed lived on Twitch and Youtube.  
+[Twitch](https://twitch.tv/clankcoll/)  
+[Youtube](https://www.youtube.com/@clanktech9336)  
