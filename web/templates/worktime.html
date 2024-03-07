@@ -17,10 +17,11 @@
         <!-- Your buttons for filling minutes -->
         <input type="submit" value="Berechnen">
     </form>
-    <!-- Placeholder for result -->
-    <div id="workTimeResult">
-        
+    {{if .Result}}
+    <div>
+        <p>{{.Result}}</p>
     </div>
+    {{end}}
         
 </body>
 </html>
